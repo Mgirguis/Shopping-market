@@ -3,7 +3,9 @@ import './homepage.scss';
 
 const HomePage = () => {
     return (  
+        // Main container
         <div className="directory-menu">
+            {/* Menu item */}
             <div className="menu-item">
                 <div className="content">
                     <h1 className="title">Hats</h1>
