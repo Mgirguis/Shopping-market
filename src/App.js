@@ -16,7 +16,7 @@ class App extends Component {
     };
   }
 
-unSubscribeFromAuth = null;
+  unSubscribeFromAuth = null;
   componentDidMount() {
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -29,8 +29,6 @@ unSubscribeFromAuth = null;
               ...snapShot.data()
             }
           });
-
-          console.log(this.state);
         });
       }
 
@@ -44,7 +42,7 @@ unSubscribeFromAuth = null;
   render() {
     return (
       <div className="App">
-        <Header currentUser={this.state.currentUser}/>
+        <Header currentUser={this.state.currentUser} />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={Shop} />
